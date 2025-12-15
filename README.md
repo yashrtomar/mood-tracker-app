@@ -6,45 +6,37 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 2. Start the app
 
-   ```bash
-   npx expo start
-   ```
+    ```bash
+    npx expo start
+    ```
 
 In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+-   [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+-   [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+-   [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+-   [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Libraries used
 
-When you're ready, run:
+-   [react-native-async-storage] (https://github.com/react-native-async-storage/async-storage)
+-   [react-native-community/slider] (https://github.com/callstack/react-native-slider)
+-   [react-native-picker/picker] (https://github.com/react-native-picker/picker)
+-   [expo-crypto] (https://github.com/expo/expo/tree/sdk-54/packages/expo-crypto)
+-   [expo-notifications] (https://github.com/expo/expo/tree/sdk-54/packages/expo-notifications)
+-   [react-native-chart-kit] (https://github.com/indiespirit/react-native-chart-kit)
 
-```bash
-npm run reset-project
-```
+## Bonus features
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-   Color coded mood: Implemented color codes for moods from 0- red to 100- green and the spectrum in between to, so color variations from red to green like yellow, orange and other shades can be seen with different mood scores.
+-   Ability to delete mood entries: Mood history list has a delete button which deletes the entry from async storage and updates the list immediately.
+-   Month selector to view trends for a specific month: A month picker has been implemented in "Mood over time" chart in the charts screen.
+-   Local notification reminder: Local notification reminder to log mood has been implemented using expo-notifications library, it is set to 9 pm and can be changed from 'utils/notifications.ts'.
